@@ -22,3 +22,5 @@ _testmain.go
 
 *.exe
 
+# Mac index files
+.DS_Store

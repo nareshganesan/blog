@@ -1,0 +1,23 @@
+
+  {{ partial "header.html" . }}
+  {{ partial "sidebar.html" . }}
+  <div class="main-content" > 
+      <div class="title" > <h2>Recent Posts</h2> </div>
+      <div class="container" > 
+          <ul class="post-list" >
+              {{ range (.Paginator 50).Pages }}
+                {{ if eq .Type "post"}}
+                    <li> 
+                        <span class="posted-date" > [ <time>{{ .Date.Format "Jan 2, 2006" }}</time> ] </span>        
+                        <span class="post-name" ><a href="{{ .Permalink }}">{{ .Title }}</a></span>
+                    </li> 
+                {{ end }}
+              {{ end }}
+          </ul>
+      </div>
+      <div>
+      {{ template "_internal/pagination.html" . }}
+
+      </div>
+  </div>
+{{ partial "footer.html" . }}

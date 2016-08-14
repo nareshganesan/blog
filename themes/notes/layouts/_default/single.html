@@ -1,0 +1,31 @@
+{{ partial "header.html" . }}
+{{ partial "sidebar.html" . }}
+
+<div class="main-content" >
+    <div class="title" > <h1>{{ .Title }}</h1> </div>
+    <div class="container" >
+        <p class="post-details" >
+            <span class="posted-date"> {{ .Date.Format "Mon, Jan 2, 2006" }} </span> 
+            <span class="post-categories"> 
+                {{ if isset .Params "categories" }}
+                <i class="fa fa-tags"></i>
+                (
+                    {{ range .Params.categories }}
+                    <a class="label" href="{{ "/categories/" | absURL }}{{ . | urlize }}">{{ . }}</a>
+                    {{ end }}
+                )
+                {{ end }}            
+            </span>
+        </p>
+        <div class="content" > 
+            {{ .Content }}
+        </div>
+    </div>
+    <div class="comments-container" >
+        <!-- {{ template "_internal/disqus.html" . }} -->
+        {{ partial "disqus.html" . }}
+    </div>
+</div>
+<!-- {{ partial "disqus.html" . }} -->
+{{ partial "footer.html" . }}
+

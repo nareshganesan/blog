@@ -1,0 +1,29 @@
+<div class="sidebar">
+    <h1> <a href="{{ .Site.Params.homepage }}" > {{ .Site.Title }} </a> </h1>
+    <label> {{ .Site.Params.description}} </label>    
+    <h3> Menu </h3>
+    <ul class="sidebar-menu" >
+        {{ range .Site.Menus.main }}
+        <li><a href="{{.URL}}">{{ .Name }} </a></li>
+        {{end}}
+    </ul>
+    <h3> Categories </h3>
+    <ul class="sidebar-categories" >
+    
+        {{ range $key, $taxonomy := .Site.Taxonomies.categories }}
+        <li> <a href="/categories/{{$key}}" > {{ $key }} </a> </li>
+        {{ end }}   
+
+    
+    </ul>
+    <h3> Connect </h3>
+    <div class="social-icons"> 
+        {{ with .Site.Params.github }}<a href="{{.}}"> <i class="fa fa-github-square"></i> </a>{{end}}
+        {{ with .Site.Params.linkedin }}<a href="{{.}}"><i class="fa fa-linkedin-square"></i></a>{{end}}
+        {{ with .Site.Params.aboutme }}<a href="{{.}}"><img class="about-me"  src="/images/about-me.svg" alt="me" /></a>{{end}}
+    </div>
+
+    <p class="footnote">powered by <a href="http://hugo.spf13.com">Hugo</a> <br/>
+    &copy; {{.Now.Format "2006"}} Naresh Ganesan. </p>
+
+</div>

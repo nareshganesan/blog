@@ -1,0 +1,37 @@
+  {{ partial "header.html" . }}
+  {{ partial "sidebar.html" . }}
+
+<div class="main-content" >
+    <div class="title" > <h2>{{ .Title}}</h2> </div>
+    <div class="container" >
+            <ul class="post-list">
+            {{ range (.Paginator 50).Pages }}
+                <li>
+                    <span class="posted-date" > [ <time>{{ .Date.Format "Jan, 2006" }}</time> ] </span>
+                    <span class="post-name" > <a href="{{ .Permalink }}">{{ .Title }}</a> </span>
+                    <div class="post-categories" > 
+                        {{ if isset .Params "categories" }}
+                        <i class="fa fa-tags"></i>
+                        (
+                        {{ range .Params.categories }}
+                        <a class="label" href="{{ "/categories/" | absURL }}{{ . | urlize }}">{{ . }}</a>
+                        {{ end }}
+                        )
+                        {{ end }}
+                    </div>
+                </li>
+             
+            {{ end }}
+            </ul>
+    </div>
+    <div>
+        {{ template "_internal/pagination.html" . }}
+    </div>
+    <div class="comments-container" >
+        <!-- {{ template "_internal/disqus.html" . }} -->
+        {{ partial "disqus.html" . }}
+    </div>
+</div>
+  <!-- {{ partial "disqus.html" . }} -->
+  {{ partial "footer.html" . }}
+

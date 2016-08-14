@@ -1,0 +1,150 @@
+/* Start: Across site*/
+
+html { font-size: 62.5%; } 
+
+body {
+    font-family:'Droid Sans', 'Ubuntu', Arial, Helvetica, sans-serif;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+}
+
+body a {
+    text-decoration: none;
+    color: #4897d8;
+}
+
+body a:hover {
+    text-decoration: underline;
+}
+
+.footnote {
+    font-size: 1.2rem;
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 2.5rem;
+}
+
+/* End: Across site */
+
+/* Start: Sidebar CSS */
+.sidebar {    
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 20%;
+    padding: 1% 1% 0% 1%;
+    margin: 1% 1%;
+    border-right: 1px solid rgba(192, 194, 195, 0.7);
+}
+
+.sidebar-menu {
+    list-style-type: none;
+    padding-left: 0px;
+    font-size: 1.6rem;
+}
+
+.sidebar-categories{
+    list-style-type: none;
+    padding-left: 0px;
+    font-size: 1.6rem;
+}
+
+
+/* End: Sidebar CSS */
+
+/* Start: Home page  CSS */
+
+.main-content {
+    margin: 0% 0% 0% 24%;
+    padding: 2% 1% 2% 1%;
+    width: 65%;
+}
+
+.post-list {
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+.post-list li {
+    margin-bottom: 3px;
+}
+
+.posted-date {
+    margin-right: 10px;
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.post-name {
+     margin-right: 25px;
+     display: inline-block;
+     margin-top: 5px;
+     font-size: 1.8rem;
+}
+
+.post-categories {
+    display: inline-block;
+    margin-top: 5px;
+}
+
+div.post-categories {
+    display: inine-block;
+    margin-left: 5px;
+}
+
+.post-categories a {
+    background: #ffffff;
+    color: #75C545;
+    padding: 2px 2px;
+    border-radius: 3px;
+    font-size: 1.3rem;
+}
+
+.post-categories a:hover {
+    background: #ffffff;
+    color: #89da59;
+    text-decoration: none;
+}
+
+.post-categories .fa-tags {
+    font-size: 12px;
+}
+
+/* End: Home page  CSS */
+
+/* Start: General Misc CSS */
+
+.fa {
+    color: black;
+}
+.social-icons a {
+    margin-right: 3px;
+    text-decoration: none;
+    margin-left: 3px;
+    font-size: 3rem;
+}
+
+.social-icons a:hover {
+    text-decoration: none;
+}
+
+.about-me {
+    width: 2.6rem;
+    margin-bottom: -2px;
+    border-radius: 5px;
+}
+
+.pagination {
+    list-style-type: none;
+}
+
+.pagination li {
+    display: inline;
+}
+
+.clear {
+    clear:both
+}
+
+/* End: General Misc CSS*/

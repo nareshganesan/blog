@@ -1,0 +1,34 @@
+theme = "notes"
+baseurl = "https://nareshganesan.github.io"
+languageCode = "en-us"
+title = "ng's blog"
+# disqus = "nareshkumarganesan"
+
+
+[params]
+    description = "Life is beautiful :)"
+    github = "https://github.com/nareshganesan"
+    linkedin = "https://linkedin.com/in/nareshkumarganesan/"
+    aboutme = "https://about.me/nareshganesan"
+    homepage = "https://nareshganesan.github.io"
+
+[[menu.main]]
+    name = "Home"
+    weight = -110
+    # identifier = "about"
+    url = "/"
+[[menu.main]]
+    name = "About"
+    weight = -100
+    identifier = "about"
+    url = "/about/"
+
+[taxonomies]
+    tag = "tags"
+    category = "categories"
+    series = "series"
+
+[blackfriday]
+    # plainIDAnchors = true
+    hrefTargetBlank = true
+
