@@ -54,7 +54,7 @@ then
 fi
 
 ## commiting the latest post to hugo template.
-cd BLOG_TEMPLATE;
+cd $BLOG_TEMPLATE;
 
 echo "Current directory: "$PWD
 
@@ -62,6 +62,7 @@ git diff --quiet; nochanges="$?";
 
 if [ $nochanges -eq 0 ]; then 
     echo "nothing to commit to repo: $BLOG_NAME";
+    exit
 
 else 
     echo "changes found in repo: $BLOG_NAME";
@@ -71,6 +72,9 @@ else
     git push origin master
     last_commit=$(git rev-parse --short HEAD)
     echo "Done commiting changes to $BLOG_NAME. "$last_commit
+    echo 
+    echo
+    echo
 fi
 
 
