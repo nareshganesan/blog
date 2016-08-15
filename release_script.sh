@@ -9,9 +9,10 @@ err_report() {
 trap 'err_report $LINENO' ERR;
 
 
-
+BLOG_NAME='blog'
 BLOG_TEMPLATE=$HOME/Documents/Personal/Workspace/blog
 BLOG_PUBLIC_FDR=$BLOG_TEMPLATE/public
+NG_GITHUB_IO_NAME='nareshganesan.github.io'
 NG_GITHUB_IO=$HOME/Documents/Personal/Workspace/nareshganesan.github.io
 
 # Help message
@@ -42,20 +43,35 @@ message=${m}
 if [ ! -d $BLOG_TEMPLATE ]
 then
     echo "$BLOG_TEMPLATE - cannot be found."
+    exit
 fi
 
 # Help message
 if [ ! -d $NG_GITHUB_IO ]
 then
     echo "$NG_GITHUB_IO - cannot be found."
+    exit
 fi
 
 ## commiting the latest post to hugo template.
 cd BLOG_TEMPLATE;
 
-git add .;
-git commit -m "${message}"
-git push origin master
+echo "Current directory: "$PWD
+
+git diff --quiet; nochanges="$?";
+
+if [ $nochanges -eq 0 ]; then 
+    echo "nothing to commit to repo: $BLOG_NAME";
+
+else 
+    echo "changes found in repo: $BLOG_NAME";
+    echo "commit message: "$message
+    git add .;
+    git commit -m "${message}"
+    git push origin master
+    last_commit=$(git rev-parse --short HEAD)
+    echo "Done commiting changes to $BLOG_NAME. "$last_commit
+fi
 
 
 # Generating latest post html content.
@@ -73,16 +89,16 @@ echo "Current directory: "$PWD
 git diff --quiet; nochanges="$?";
 
 if [ $nochanges -eq 0 ]; then 
-    echo "nothing to commit to repo: $NG_GITHUB_IO";
+    echo "nothing to commit to repo: $NG_GITHUB_IO_NAME";
 
 else 
-    echo "changes found in repo: $NG_GITHUB_IO";
+    echo "changes found in repo: $NG_GITHUB_IO_NAME";
     echo "commit message: "$message
     git add .;
     git commit -m "${message}"
     git push origin master
     last_commit=$(git rev-parse --short HEAD)
-    echo "Done commiting changes. "$last_commit
+    echo "Done commiting changes to $NG_GITHUB_IO_NAME. "$last_commit
 fi
 
 
