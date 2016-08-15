@@ -50,6 +50,15 @@ then
     echo "$NG_GITHUB_IO - cannot be found."
 fi
 
+## commiting the latest post to hugo template.
+cd BLOG_TEMPLATE;
+
+git add .;
+git commit -m "${message}"
+git push origin master
+
+
+# Generating latest post html content.
 hugo &> /dev/null;
 
 ## Copy latest post to github.io repo.
