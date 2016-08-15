@@ -50,6 +50,9 @@ then
     echo "$NG_GITHUB_IO - cannot be found."
 fi
 
+hugo &> /dev/null;
+
+## Copy latest post to github.io repo.
 cp -r $BLOG_PUBLIC_FDR/ $NG_GITHUB_IO
 
 cd $NG_GITHUB_IO
@@ -66,12 +69,11 @@ if [ $nochanges -eq 0 ]; then
 else 
     echo "changes found in repo: $NG_GITHUB_IO";
     echo "commit message: "$message
-    # git add .;
-    # git commit -m "${message}"
-    # git push origin master
-    # echo "Done commiting changes."
+    git add .;
+    git commit -m "${message}"
+    git push origin master
     last_commit=$(git rev-parse --short HEAD)
-    echo $last_commit
+    echo "Done commiting changes. "$last_commit
 fi
 
 
