@@ -13,17 +13,17 @@ We are company that specialises in CV, machine learning and Deep Learning.
 Some of the day to day techology we use @ [1000Lookz] have been listed below.
 
 ### Technologies
-
 DL
-
 - Caffe
 
 CV
-
 - Dlib
 - OpenCV
 - Tesseract
 - Ocropy
+
+### Tools
+Celery, Tornado, Flask
 
 We are a virtual makeover company specialising on virtual tryon. 
 Some of our current solutions include Tryon make over, Tryon Eyewear, Tryon Jewelry and much more to come. 

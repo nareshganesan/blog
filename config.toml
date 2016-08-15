@@ -3,6 +3,9 @@ baseurl = "https://nareshganesan.github.io"
 languageCode = "en-us"
 title = "ng's blog"
 # disqus = "nareshkumarganesan"
+#TODO: need to test if disqus user name can be accessed from config.toml
+# currenlty the user name is hardcoded in javascript.
+disqusUserName = 'nareshkumarganesan'
 
 
 [params]
