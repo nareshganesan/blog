@@ -17,10 +17,7 @@ DL
 - Caffe
 
 CV
-- Dlib
-- OpenCV
-- Tesseract
-- Ocropy
+- Dlib, OpenCV, Tesseract, Ocropy
 
 ### Tools
 Celery, Tornado, Flask
