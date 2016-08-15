@@ -9,10 +9,10 @@ err_report() {
 trap 'err_report $LINENO' ERR;
 
 
-BLOG_NAME='blog'
+BLOG_NAME='https://github.com/nareshganesan/blog'
 BLOG_TEMPLATE=$HOME/Documents/Personal/Workspace/blog
 BLOG_PUBLIC_FDR=$BLOG_TEMPLATE/public
-NG_GITHUB_IO_NAME='nareshganesan.github.io'
+NG_GITHUB_IO_NAME='https://github.com/nareshganesan/nareshganesan.github.io'
 NG_GITHUB_IO=$HOME/Documents/Personal/Workspace/nareshganesan.github.io
 
 # Help message
@@ -67,9 +67,9 @@ if [ $nochanges -eq 0 ]; then
 else 
     echo "changes found in repo: $BLOG_NAME";
     echo "commit message: "$message
-    git add .;
-    git commit -m "${message}"
-    git push origin master
+    git add . &> /dev/null;
+    git commit -m "${message}" &> /dev/null;
+    git push origin master &> /dev/null;
     last_commit=$(git rev-parse --short HEAD)
     echo "Done commiting changes to $BLOG_NAME. "$last_commit
     echo 
@@ -98,9 +98,9 @@ if [ $nochanges -eq 0 ]; then
 else 
     echo "changes found in repo: $NG_GITHUB_IO_NAME";
     echo "commit message: "$message
-    git add .;
-    git commit -m "${message}"
-    git push origin master
+    git add . &> /dev/null;
+    git commit -m "${message}" &> /dev/null;
+    git push origin master &> /dev/null;
     last_commit=$(git rev-parse --short HEAD)
     echo "Done commiting changes to $NG_GITHUB_IO_NAME. "$last_commit
 fi
