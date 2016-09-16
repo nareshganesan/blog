@@ -22,7 +22,6 @@ Lets create a list of my inspiring movies/documentaries list. Whenever I feel lo
 
 
 
-
 [Coach Carter]: https://en.wikipedia.org/wiki/Coach_Carter
 [Good Will Hunting]: https://en.wikipedia.org/wiki/Good_Will_Hunting
 [Hello I am David]: http://www.imdb.com/title/tt3904986/

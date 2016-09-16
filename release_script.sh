@@ -60,7 +60,7 @@ echo "Current directory: "$PWD
 
 git diff --quiet; nochanges="$?";
 
-if [ $nochanges -eq 0 ]; then 
+if [ $nochanges -eq "0" ]; then 
     echo "nothing to commit to repo: $BLOG_NAME";
     exit
 
