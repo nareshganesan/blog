@@ -6,7 +6,9 @@ title = "Inspiring movie/documentary list"
 
 +++
 
-Lets create a list of my inspiring movies/documentaries list. Whenever I feel low, pick a random video from the list and I pick something new from these movies. I'm sure everyone has something to get a bite of it. This is not a comprehensive list but a just of the top of my mind. I will try to keep frequently update.
+In life there are ups and downs, no matter what socio economic status we are in. All that matters is how we would like to face everything and move forward. Everybody, has their personal way of handling difficult situations. Personally I, love to rewind the chain of events and learn from it. 
+
+Also, I try to watch some of my favorite movies/documentaries. These are my personal favorites when it comes to boosting confidence / inspiration. The list is scattered across different genres but certainly all the movies have some useful insights for everyone in all stages of life. I want to share the list here so everyone can pick something and get motivated when they are running low. I will try to frequently update.
 
 
 
