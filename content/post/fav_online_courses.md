@@ -2,17 +2,20 @@
 categories = []
 date = "2016-09-17T03:30:13+05:30"
 keywords = []
-title = "todos"
+title = "Favorite online courses"
 
 +++
 
 
-My TODO page, where I like to use add my immediate and intermediate action items. 
+Initially I started this page, to keep track of some of the courses which I've taken or planning to enroll. 
+But the post title 'Todo's' do not make any sense. I'm changing the title favorite online courses. 
 
 
 #### Basic computing courses
 
 - [Intro CS]
+- [Intro CS with Python]
+- [Computational thinking]
 - [Intro Stats]
 - [Intro Algo]
 - [Descriptive Stats]
@@ -37,6 +40,8 @@ My TODO page, where I like to use add my immediate and intermediate action items
 
 
 [Intro CS]: https://www.udacity.com/course/intro-to-computer-science--cs101
+[Intro CS with Python]: https://www.edx.org/course/introduction-computer-science-mitx-6-00-1x-8#!
+[Computational thinking]: https://www.edx.org/course/introduction-computational-thinking-data-mitx-6-00-2x-4
 [Intro Stats]: https://www.udacity.com/course/intro-to-statistics--st101
 [Intro Algo]: https://www.udacity.com/course/intro-to-algorithms--cs215
 [Descriptive Stats]: https://www.udacity.com/course/intro-to-descriptive-statistics--ud827
